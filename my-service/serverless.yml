@@ -63,7 +63,8 @@ functions:
 #    Check the event documentation for details
     events:
       - http:
-          path: users/create
+          # path: users/create
+          path: users/get
           method: get
       # - s3: ${env:BUCKET}
       # - schedule: rate(10 minutes)
@@ -86,7 +87,6 @@ functions:
       # - cognitoUserPool:
       #     pool: MyUserPool
       #     trigger: PreSignUp
-
 #    Define function environment variables here
     # environment:
     #   variable2: value2
@@ -102,3 +102,5 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+plugins:
+  - serverless-offline
